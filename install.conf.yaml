@@ -1,4 +1,26 @@
-- clean: ['~']
+- defaults:
+    link:
+      relink: true
 
 - link:
+    ~/.ssh/config:
+        path: sconfig/ssh/config
+        create: true
+    ~/.config/fish:
+        glob: true
+        path: config/fish/*
+    ~/.local/bin/:
+        glob: true
+        path: bin/*
+    ~/.gitconfig: sconfig/gitconfig
+    ~/.zprofile: config/zprofile
+    ~/.config/fish/sconfig.fish: sconfig/fish/sconfig.fish
+    ~/.config/fish/sfunctions: sconfig/fish/sfunctions
 
+- clean:
+    ~/.config:
+      force: true 
+      recursive: true     
+    ~/.local/bin:
+      force: true
+      recursive: true
