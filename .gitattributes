@@ -1,0 +1,8 @@
+# default template
+*.key filter=git-crypt diff=git-crypt
+secretdir/** filter=git-crypt diff=git-crypt
+secretfile filter=git-crypt diff=git-crypt
+
+# my specifications
+sconfig/** filter=git-crypt diff=git-crypt
+
