@@ -20,6 +20,8 @@
     ~/.config/offlineimap: sconfig/offlineimap
     ~/Library/Thunderbird/profiles.ini: sconfig/thunderbird/profiles.ini
     ~/.notmuch-config: sconfig/notmuch.config
+    ~/.config/youtube-dl/config: config/youtube-dl.conf
+    ~/Dropbox/Pensieve/21_Notes/.obsidian: config/obsidian
 
 - clean:
     ~/.config:

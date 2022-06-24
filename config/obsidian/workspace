@@ -1,0 +1,145 @@
+{
+  "main": {
+    "id": "0851674f379e1f22",
+    "type": "split",
+    "children": [
+      {
+        "id": "22982ab5a4845ab4",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "8_Postdoc/central complex questions.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0d35571f33300c2d",
+    "type": "split",
+    "children": [
+      {
+        "id": "837c2fffbcdda600",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "313c355459a0c398",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "fb4681b82a263fcf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "54cf7c93946a81aa",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b986bc2d960eced7",
+    "type": "split",
+    "children": [
+      {
+        "id": "dd47e90b2d769786",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f06c110445dc19c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "8_Postdoc/central complex questions.md",
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2f3d54f6e8966927",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "8_Postdoc/central complex questions.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6425a67cd1a8c6a4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0845a0b88a5b0245",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "8_Postdoc/central complex questions.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "22982ab5a4845ab4",
+  "lastOpenFiles": [
+    "8_Postdoc/central complex questions.md",
+    "Important questions.md",
+    "8_Postdoc/ring neuron fly lines.md",
+    "4_Resources/bolts, screws, threads, and standards.md",
+    "Untitled.md",
+    "+Home.md",
+    "4_Resources/software/Obisidian.md",
+    "4_Resources/software/Obsidian hacks.md",
+    "0_Inbox/Research insights.md",
+    "0_Inbox/Temp purchase list.md"
+  ]
+}
