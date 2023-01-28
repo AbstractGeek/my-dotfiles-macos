@@ -21,7 +21,15 @@
     ~/Library/Thunderbird/profiles.ini: sconfig/thunderbird/profiles.ini
     ~/.notmuch-config: sconfig/notmuch.config
     ~/.config/youtube-dl/config: config/youtube-dl.conf
-    ~/Dropbox/Pensieve/21_Notes/.obsidian: config/obsidian
+    ~/.condarc: config/condarc
+    ~/.cloudvolume/secrets/prod.flywire-daf.com-cave-secret.json: sconfig/svault/prod.flywire-daf.com-cave-secret.json
+    ~/.local/share/python/gapi.json: sconfig/svault/gapi.json
+    ~/.config/task:
+        glob: true
+        path: config/task/*
+    ~/.taskrc: config/task/taskrc
+    
+
 
 - clean:
     ~/.config:

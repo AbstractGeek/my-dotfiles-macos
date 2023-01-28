@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "22982ab5a4845ab4",
+        "id": "21542d4dcf8cae1d",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "8_Postdoc/central complex questions.md",
+            "file": "10_Academia/16_Peer-review/16.13_CB_D-22-01802/02_comments.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "8_Postdoc/central complex questions.md",
+                "file": "10_Academia/16_Peer-review/16.13_CB_D-22-01802/02_comments.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "8_Postdoc/central complex questions.md",
+                "file": "10_Academia/16_Peer-review/16.13_CB_D-22-01802/02_comments.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8_Postdoc/central complex questions.md"
+                "file": "10_Academia/16_Peer-review/16.13_CB_D-22-01802/02_comments.md"
               }
             }
           }
@@ -129,17 +129,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "22982ab5a4845ab4",
+  "active": "21542d4dcf8cae1d",
   "lastOpenFiles": [
-    "8_Postdoc/central complex questions.md",
-    "Important questions.md",
-    "8_Postdoc/ring neuron fly lines.md",
-    "4_Resources/bolts, screws, threads, and standards.md",
-    "Untitled.md",
-    "+Home.md",
-    "4_Resources/software/Obisidian.md",
-    "4_Resources/software/Obsidian hacks.md",
-    "0_Inbox/Research insights.md",
-    "0_Inbox/Temp purchase list.md"
+    "10_Academia/16_Peer-review/16.08_JEXBIO:2019:200261/3_JEXBIO:2019:200261_v1_comments.md",
+    "10_Academia/16_Peer-review/16.13_CB_D-22-01802/02_comments.md",
+    "10_Academia/11_Scientific-work/11.05_Pitch-Up/2022-09-29 - Pitch meeting.md",
+    "10_Academia/13_Grants_Competitions/13.17_LSRF/12_JHS_feedback.md",
+    "10_Academia/13_Grants_Competitions/13.17_LSRF/15_ML_feedback.md",
+    "10_Academia/13_Grants_Competitions/13.17_LSRF/12_JHS_feedback_DineshNatesan_LSRF_proposal.pdf",
+    "10_Academia/13_Grants_Competitions/13.17_LSRF/12_DineshNatesan_LSRF_proposal.pdf",
+    "10_Academia/17_ECR/17.01_elife_ambassador_program/00_meeting_notes/2022-09-16_project_next_steps.md",
+    "10_Academia/17_ECR/17.01_elife_ambassador_program/00_meeting_notes/elife_support.md",
+    "10_Academia/17_ECR/17.01_elife_ambassador_program/15_reproducibility.md"
   ]
 }

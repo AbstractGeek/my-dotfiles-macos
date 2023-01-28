@@ -1,0 +1,8 @@
+channels: [conda-forge]
+auto_update_conda: false
+create_default_packages:
+  - pip
+envs_dirs:
+  - ~/.virtualenvs/
+  - /opt/homebrew/Caskroom/miniforge/base/envs
+default_threads: 4
