@@ -11,3 +11,9 @@ register-python-argcomplete --shell fish pipx >~/.config/fish/completions/pipx.f
 # sconfig and sfunctions
 set fish_function_path $fish_function_path  /Users/dinesh/.config/fish/sfunctions
 source /Users/dinesh/.config/fish/sconfig.fish
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
