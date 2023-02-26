@@ -17,3 +17,5 @@ source /Users/dinesh/.config/fish/sconfig.fish
 # eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
+# additional env variables
+set -gx GOPATH /Users/dinesh/.go
