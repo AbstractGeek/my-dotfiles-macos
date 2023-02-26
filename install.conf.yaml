@@ -28,8 +28,9 @@
         glob: true
         path: config/task/*
     ~/.taskrc: config/task/taskrc
-    
-
+    ~/Applications/custom_startup.app:
+        path: sbin/custom_startup.app
+        create: true
 
 - clean:
     ~/.config:
