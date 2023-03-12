@@ -19,3 +19,10 @@ source /Users/dinesh/.config/fish/sconfig.fish
 
 # additional env variables
 set -gx GOPATH /Users/dinesh/.go
+
+# taskwarrior
+if [ "$(defaults read -g AppleInterfaceStyle)" = "Dark" ]
+    set -gx TASK_THEME dark-256.theme
+else
+    set -gx TASK_THEME light-256.theme
+end
