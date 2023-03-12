@@ -25,12 +25,14 @@
     ~/.cloudvolume/secrets/prod.flywire-daf.com-cave-secret.json: sconfig/svault/prod.flywire-daf.com-cave-secret.json
     ~/.local/share/python/gapi.json: sconfig/svault/gapi.json
     ~/.config/task:
-        glob: true
-        path: config/task/*
-    ~/.taskrc: config/task/taskrc
+        path: sconfig/task
+        create: true
     ~/Applications/custom_startup.app:
         path: sbin/custom_startup.app
         create: true
+    ~/Tsundoku/Kos/Spyglass/lenses:
+        glob: true
+        path: config/spyglass/*
 
 - clean:
     ~/.config:
