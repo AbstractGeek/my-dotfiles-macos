@@ -12,6 +12,9 @@
     ~/.local/bin/:
         glob: true
         path: bin/*
+    ~/.local/bin/:
+        glob: true
+        path: sbin/*
     ~/.gitconfig: sconfig/gitconfig
     ~/.zprofile: config/zprofile
     ~/.config/fish/sconfig.fish: sconfig/fish/sconfig.fish
@@ -27,12 +30,18 @@
     ~/.config/task:
         path: sconfig/task
         create: true
+    ~/.taskrc: sconfig/task/taskrc
+    
+    # custom applications
     ~/Applications/custom_startup.app:
         path: sbin/custom_startup.app
         create: true
-    ~/Tsundoku/Kos/Spyglass/lenses:
+    /Users/dinesh/Tsundoku/Kos/Spyglass/lenses/:
         glob: true
-        path: config/spyglass/*
+        path: config/spyglass/*.ron
+    
+    # obsidian configs
+    
 
 - clean:
     ~/.config:
