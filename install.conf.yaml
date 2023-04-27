@@ -36,11 +36,18 @@
     ~/Applications/custom_startup.app:
         path: sbin/custom_startup.app
         create: true
-    /Users/dinesh/Tsundoku/Kos/Spyglass/lenses/:
+    ~/Library/Preferences/com.athlabs.spyglass/settings.ron: sconfig/spyglass
+    ~/Tsundoku/Kos/Spyglass/lenses/:
         glob: true
         path: config/spyglass/*.ron
     
     # obsidian configs
+    ~/Dropbox/Pensieve/21_Notes/.obsidian:
+        glob: true
+        path: config/obsidian/*
+    ~/Tsundoku/Kos/22_Meraki/.obsidian:
+        glob: true
+        path: config/obsidian/*
     
 
 - clean:
