@@ -2,8 +2,10 @@
   "legacyEditor": false,
   "livePreview": true,
   "communityPluginSortOrder": "download",
-  "attachmentFolderPath": "0_Inbox/Attachments",
-  "useMarkdownLinks": true,
+  "attachmentFolderPath": "./attachments",
+  "useMarkdownLinks": false,
   "spellcheck": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "showUnsupportedFiles": true
 }

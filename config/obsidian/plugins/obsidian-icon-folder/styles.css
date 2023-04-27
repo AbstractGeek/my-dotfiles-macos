@@ -1,8 +1,14 @@
 .obsidian-icon-folder-icon {
   border: 1px solid transparent;
-  padding: 2px 2px 2px 2px;
+  margin: 0px 4px 0px 0px;
   display: flex;
+  align-self: center;
   margin: auto 0;
+}
+
+.nav-folder-title,
+.nav-file-title {
+  align-items: center;
 }
 
 .obsidian-icon-folder-setting .setting-item-control .dropdown {
@@ -26,6 +32,15 @@
   color: gray;
   grid-column-start: 1;
   grid-column-end: 6;
+}
+
+@media (max-width: 640px) {
+  .obsidian-icon-folder-modal.prompt-results {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .prompt .obsidian-icon-folder-subheadline {
+    grid-column-end: 4;
+  }
 }
 
 .obsidian-icon-folder-modal.prompt-results .suggestion-item {
