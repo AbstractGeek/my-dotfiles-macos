@@ -37,12 +37,18 @@ def convert_supernotes(note):
     # Get filename
     pdf_name = os.path.join(os.path.dirname(note), 
                             os.path.splitext(os.path.basename(note))[0] + ".pdf")
+    txt_name = os.path.join(os.path.dirname(note), 
+                            os.path.splitext(os.path.basename(note))[0] + ".txt")
 
     # Convert to pdf
     subprocess.run([os.path.expanduser(supernote_tool_path), "convert", "-t", "pdf", "-a", note, pdf_name ])
+    # Extract text
+    subprocess.run([os.path.expanduser(supernote_tool_path), "convert", "-t", "txt", "-a", note, txt_name ])
     
     # Log completed pdf
-    logging.info("Converted to pdf: %s", pdf_name)
+    logging.info("Converted to pdf (and txt if applicable): %s", pdf_name)
+
+
     
 
 
