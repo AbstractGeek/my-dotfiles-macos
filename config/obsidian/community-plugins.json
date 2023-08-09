@@ -2,5 +2,13 @@
   "url-into-selection",
   "obsidian-linter",
   "obsidian-icon-folder",
-  "table-editor-obsidian"
+  "table-editor-obsidian",
+  "emoji-shortcodes",
+  "dataview",
+  "callout-manager",
+  "obsidian-outliner",
+  "obsidian-hider",
+  "obsidian-minimal-settings",
+  "obsidian-style-settings",
+  "quickadd"
 ]

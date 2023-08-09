@@ -3,41 +3,17 @@
     "migrated": true,
     "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
     "fontSize": 16,
+    "emojiStyle": "none",
     "iconColor": null,
-    "recentlyUsedIcons": [
-      "FasBook",
-      "FasRainbow",
-      "FasCompass",
-      "IbScaleCircle",
-      "FasBoxArchive"
-    ],
+    "recentlyUsedIcons": [],
     "recentlyUsedIconsSize": 5,
     "rules": [],
-    "extraPadding": {
-      "top": 2,
-      "right": 2,
-      "bottom": 2,
-      "left": 2
-    },
     "extraMargin": {
-      "top": 2,
-      "right": 2,
-      "bottom": 2,
-      "left": 2
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
     },
-    "emojiStyle": "none",
     "iconInTabsEnabled": false
-  },
-  "0_Inbox": "FasInbox",
-  "5_Workflows": "FasDiagramSuccessor",
-  "1_Science": "FasAtom",
-  "2_Concepts": "FasBrain",
-  "4_Resources": "FasLayerGroup",
-  "6_Work benches": "FasHammer",
-  "8_Postdoc": "FasSeedling",
-  "7_Zettelkasten": "FasBoxArchive",
-  "7_Zettelkasten/Broad ideas": "IbScaleCircle",
-  "7_Zettelkasten/Orientation & Navigation": "FasCompass",
-  "3_Cogitation": "FasRainbow",
-  "3_Cogitation/Books": "FasBook"
+  }
 }

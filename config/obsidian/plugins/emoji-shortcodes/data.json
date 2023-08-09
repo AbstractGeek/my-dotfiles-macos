@@ -1,0 +1,18 @@
+{
+  "immediateReplace": true,
+  "suggester": true,
+  "historyPriority": true,
+  "historyLimit": 100,
+  "history": [
+    ":nerd_face:",
+    ":sweat_smile:",
+    ":national_park:",
+    ":tada:",
+    ":sparkles:",
+    ":partying_face:",
+    ":star_struck:",
+    ":diving_mask:",
+    ":hole:",
+    ":angry:"
+  ]
+}

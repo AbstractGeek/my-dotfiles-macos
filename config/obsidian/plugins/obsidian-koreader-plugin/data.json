@@ -1,0 +1,20 @@
+{
+  "importedNotes": {},
+  "enbleResetImportedNotes": false,
+  "keepInSync": true,
+  "aFolderForEachBook": true,
+  "customTemplate": false,
+  "customDataviewTemplate": false,
+  "createDataviewQuery": false,
+  "koreaderBasePath": "",
+  "obsidianNoteFolder": "3_Cogitation/Books",
+  "noteTitleOptions": {
+    "maxWords": 5,
+    "maxLength": 25
+  },
+  "bookTitleOptions": {
+    "maxWords": 5,
+    "maxLength": 25,
+    "prefix": "(book) "
+  }
+}

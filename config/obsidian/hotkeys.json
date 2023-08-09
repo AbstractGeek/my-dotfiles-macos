@@ -7,5 +7,46 @@
       ],
       "key": "T"
     }
+  ],
+  "editor:cycle-list-checklist": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "B"
+    }
+  ],
+  "quickadd:runQuickAdd": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "1"
+    }
+  ],
+  "quickadd:choice:43ceec81-1b3f-497d-8e77-7998c3dd6c40": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "2"
+    }
+  ],
+  "quickadd:choice:620ef66e-7311-4764-9118-9d197dc55936": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "3"
+    }
+  ],
+  "quickadd:choice:97c88bfa-2f6c-4c13-975e-94d6d1caf11b": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "4"
+    }
   ]
 }

@@ -1,0 +1,57 @@
+{
+  "callouts": {
+    "custom": [
+      "memory",
+      "network",
+      "ideas"
+    ],
+    "settings": {
+      "memory": [
+        {
+          "changes": {
+            "icon": "lucide-save",
+            "color": "255, 115, 0"
+          }
+        }
+      ],
+      "new-ideas": [
+        {
+          "changes": {
+            "icon": "lucide-brain-circuit",
+            "color": "255, 0, 123"
+          }
+        }
+      ],
+      "new-network": [
+        {
+          "changes": {
+            "icon": "lucide-network",
+            "color": "187, 0, 255"
+          }
+        }
+      ],
+      "network": [
+        {
+          "changes": {
+            "icon": "lucide-network",
+            "color": "212, 0, 255"
+          }
+        }
+      ],
+      "ideas": [
+        {
+          "changes": {
+            "icon": "lucide-brain-circuit",
+            "color": "255, 0, 123"
+          }
+        }
+      ]
+    }
+  },
+  "calloutDetection": {
+    "obsidianFallbackForced": false,
+    "obsidian": true,
+    "theme": true,
+    "snippet": true
+  }
+}

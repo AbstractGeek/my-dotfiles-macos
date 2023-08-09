@@ -1,0 +1,7 @@
+{
+  "minimal-style@@callouts-style": "callouts-outlined",
+  "minimal-style@@maximize-tables-off": "maximize-tables-off",
+  "minimal-style@@table-nowrap": false,
+  "minimal-style@@trim-cols": false,
+  "minimal-style@@row-hover": true
+}
