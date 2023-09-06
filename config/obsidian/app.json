@@ -14,5 +14,8 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "showFrontmatter": false
+  "showFrontmatter": false,
+  "userIgnoreFilters": [
+    "0_Meta/Templates/"
+  ]
 }

@@ -1,0 +1,38 @@
+{
+  "targetAttributes": [],
+  "targetTags": true,
+  "getFromInlineField": true,
+  "enableTabHeader": true,
+  "activateSnippet": true,
+  "enableEditor": true,
+  "enableFileList": true,
+  "enableBacklinks": true,
+  "enableQuickSwitcher": true,
+  "enableSuggestor": true,
+  "selectors": [
+    {
+      "type": "tag",
+      "name": "",
+      "value": "person",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "0a70-9785",
+      "selectText": true,
+      "selectAppend": false,
+      "selectPrepend": true,
+      "selectBackground": false
+    },
+    {
+      "type": "tag",
+      "name": "",
+      "value": "project",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "b148-41b9",
+      "selectText": true,
+      "selectAppend": false,
+      "selectPrepend": true,
+      "selectBackground": true
+    }
+  ]
+}

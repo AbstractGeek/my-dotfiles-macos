@@ -1,7 +1,13 @@
 {
   "minimal-style@@callouts-style": "callouts-outlined",
-  "minimal-style@@maximize-tables-off": "maximize-tables-off",
+  "minimal-style@@maximize-tables-off": "maximize-tables",
   "minimal-style@@table-nowrap": false,
   "minimal-style@@trim-cols": false,
-  "minimal-style@@row-hover": true
+  "minimal-style@@row-hover": true,
+  "minimal-style@@italic-color@@light": "#009688",
+  "minimal-style@@italic-color@@dark": "#4DB6AC",
+  "supercharged-links@@0a70-9785-before": "🧑🏾 ",
+  "supercharged-links@@0a70-9785-color": "#A1887F",
+  "supercharged-links@@b148-41b9-color": "#F06292",
+  "supercharged-links@@b148-41b9-before": "⛮ "
 }

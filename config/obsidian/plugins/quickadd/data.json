@@ -1,70 +1,10 @@
 {
   "choices": [
     {
-      "id": "43ceec81-1b3f-497d-8e77-7998c3dd6c40",
-      "name": "Day",
-      "type": "Template",
-      "command": true,
-      "templatePath": "0_Meta/Templates/Day.md",
-      "fileNameFormat": {
-        "enabled": true,
-        "format": "{{date:YYYY-MM-DD}}"
-      },
-      "folder": {
-        "enabled": true,
-        "folders": [
-          "1_Routine/Days"
-        ],
-        "chooseWhenCreatingNote": false,
-        "createInSameFolderAsActiveFile": false,
-        "chooseFromSubfolders": false
-      },
-      "appendLink": false,
-      "openFileInNewTab": {
-        "enabled": true,
-        "direction": "vertical",
-        "focus": true
-      },
-      "openFile": true,
-      "openFileInMode": "default",
-      "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
-    },
-    {
-      "id": "620ef66e-7311-4764-9118-9d197dc55936",
-      "name": "Week",
-      "type": "Template",
-      "command": true,
-      "templatePath": "0_Meta/Templates/Week.md",
-      "fileNameFormat": {
-        "enabled": true,
-        "format": "{{date:YYYY-MM-[W]WW}}"
-      },
-      "folder": {
-        "enabled": true,
-        "folders": [
-          "1_Routine/Weeks"
-        ],
-        "chooseWhenCreatingNote": false,
-        "createInSameFolderAsActiveFile": false,
-        "chooseFromSubfolders": false
-      },
-      "appendLink": false,
-      "openFileInNewTab": {
-        "enabled": true,
-        "direction": "vertical",
-        "focus": true
-      },
-      "openFile": true,
-      "openFileInMode": "default",
-      "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
-    },
-    {
       "id": "97c88bfa-2f6c-4c13-975e-94d6d1caf11b",
       "name": "Month",
       "type": "Template",
-      "command": true,
+      "command": false,
       "templatePath": "0_Meta/Templates/Month.md",
       "fileNameFormat": {
         "enabled": true,

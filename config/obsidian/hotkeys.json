@@ -48,5 +48,31 @@
       ],
       "key": "4"
     }
+  ],
+  "periodic-notes:prev-monthly-note": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "2"
+    }
+  ],
+  "periodic-notes:next-monthly-note": [
+    {
+      "modifiers": [
+        "Alt",
+        "Ctrl"
+      ],
+      "key": "2"
+    }
+  ],
+  "periodic-notes:open-monthly-note": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "2"
+    }
   ]
 }

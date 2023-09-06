@@ -1,7 +1,8 @@
 {
-  "baseFontSize": 15,
+  "baseFontSize": 17,
   "accentColor": "",
   "translucency": true,
   "cssTheme": "Minimal",
-  "theme": "moonstone"
+  "theme": "obsidian",
+  "interfaceFontFamily": "Inter"
 }

@@ -245,10 +245,11 @@
   "lintOnSave": true,
   "recordLintOnSaveLogs": false,
   "displayChanged": false,
+  "lintOnFileChange": false,
+  "displayLintOnFileChangeNotice": false,
   "settingsConvertedToConfigKeyValues": true,
   "foldersToIgnore": [
-    "1_Science/Papers",
-    "0_Meta/Templates"
+    "1_Science/Papers"
   ],
   "linterLocale": "system-default",
   "logLevel": 4,
