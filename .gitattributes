@@ -6,3 +6,4 @@ secretfile filter=git-crypt diff=git-crypt
 # my specifications
 sconfig/** filter=git-crypt diff=git-crypt
 sbin/** filter=git-crypt diff=git-crypt
+folders.conf.yaml filter=git-crypt diff=git-crypt
