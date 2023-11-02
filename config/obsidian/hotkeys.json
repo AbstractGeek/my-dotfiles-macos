@@ -17,14 +17,6 @@
       "key": "B"
     }
   ],
-  "quickadd:runQuickAdd": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "1"
-    }
-  ],
   "quickadd:choice:43ceec81-1b3f-497d-8e77-7998c3dd6c40": [
     {
       "modifiers": [
@@ -73,6 +65,32 @@
         "Ctrl"
       ],
       "key": "2"
+    }
+  ],
+  "editor:toggle-strikethrough": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "S"
+    }
+  ],
+  "quickadd:runQuickAdd": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "1"
+    }
+  ],
+  "switcher:open": [],
+  "obsidian-footnotes:insert-autonumbered-footnote": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F"
     }
   ]
 }

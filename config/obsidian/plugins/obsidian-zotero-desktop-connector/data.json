@@ -1,0 +1,21 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "7_Zettelkasten/Literature notes",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [],
+  "exportFormats": [
+    {
+      "name": "Zotero notes import",
+      "outputPathTemplate": "7_Zettelkasten/Literature notes/{{citekey}}.md",
+      "imageOutputPathTemplate": "7_Zettelkasten/Literature notes/attachments/{{citekey}}/",
+      "imageBaseNameTemplate": "image",
+      "templatePath": "0_Meta/Templates/Paper.md",
+      "cslStyle": "nature"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": true,
+  "whichNotesToOpenAfterImport": "all-imported-notes"
+}

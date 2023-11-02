@@ -67,13 +67,13 @@
       "command": false,
       "templatePath": "0_Meta/Templates/Project.md",
       "fileNameFormat": {
-        "enabled": true,
-        "format": "new_project"
+        "enabled": false,
+        "format": ""
       },
       "folder": {
         "enabled": true,
         "folders": [
-          "5_Projects"
+          "3_Projects"
         ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false,
@@ -119,6 +119,36 @@
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
       "setFileExistsBehavior": false
+    },
+    {
+      "id": "a403fd0f-8cb9-4269-a035-3797cc514717",
+      "name": "Memory",
+      "type": "Template",
+      "command": false,
+      "templatePath": "0_Meta/Templates/Memory.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "2_Memories"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
     }
   ],
   "macros": [],
@@ -126,7 +156,7 @@
   "devMode": false,
   "templateFolderPath": "0_Meta/Templates",
   "announceUpdates": false,
-  "version": "1.2.1",
+  "version": "1.4.0",
   "disableOnlineFeatures": true,
   "ai": {
     "OpenAIApiKey": "",

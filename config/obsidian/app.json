@@ -2,14 +2,14 @@
   "legacyEditor": false,
   "livePreview": true,
   "communityPluginSortOrder": "download",
-  "attachmentFolderPath": "./attachments",
+  "attachmentFolderPath": "./",
   "useMarkdownLinks": false,
   "spellcheck": true,
   "alwaysUpdateLinks": true,
   "promptDelete": false,
   "showUnsupportedFiles": true,
   "pdfExportSettings": {
-    "pageSize": "Letter",
+    "pageSize": "A4",
     "landscape": false,
     "margin": "0",
     "downscalePercent": 100

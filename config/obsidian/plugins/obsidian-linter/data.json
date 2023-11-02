@@ -249,10 +249,11 @@
   "displayLintOnFileChangeNotice": false,
   "settingsConvertedToConfigKeyValues": true,
   "foldersToIgnore": [
-    "1_Science/Papers"
+    "",
+    ""
   ],
   "linterLocale": "system-default",
-  "logLevel": 4,
+  "logLevel": "ERROR",
   "lintCommands": [],
   "customRegexes": [],
   "commonStyles": {
