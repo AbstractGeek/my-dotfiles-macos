@@ -30,7 +30,9 @@
     ~/.taskrc: sconfig/task/taskrc
     ~/.config/convert_supernotes/config.yml: sconfig/convert_supernotes_config.yml
     ~/.config/supernote_zotfile/config.yml:  sconfig/supernote_zotfile_config.yml
-    
+    ~/.config/koreader2obsidian.yml:  sconfig/koreader2obsidian.yml
+
+
     # custom applications
     ~/Applications/custom_startup.app:
         path: sbin/custom_startup.app
