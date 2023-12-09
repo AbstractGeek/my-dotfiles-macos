@@ -84,7 +84,15 @@
       "key": "1"
     }
   ],
-  "switcher:open": [],
+  "switcher:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": " "
+    }
+  ],
   "obsidian-footnotes:insert-autonumbered-footnote": [
     {
       "modifiers": [

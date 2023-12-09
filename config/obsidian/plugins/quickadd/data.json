@@ -156,7 +156,7 @@
   "devMode": false,
   "templateFolderPath": "0_Meta/Templates",
   "announceUpdates": false,
-  "version": "1.4.0",
+  "version": "1.6.1",
   "disableOnlineFeatures": true,
   "ai": {
     "OpenAIApiKey": "",

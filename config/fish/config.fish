@@ -22,11 +22,11 @@ set -gx GOPATH /Users/dinesh/.go
 set -gx EDITOR /usr/bin/nano
 
 # taskwarrior
-if [ "$(defaults read -g AppleInterfaceStyle)" = Dark ]
-    set -gx TASK_THEME dark-256.theme
-else
-    set -gx TASK_THEME light-256.theme
-end
+#if [ "$(defaults read -g AppleInterfaceStyle)" = Dark ]
+#    set -gx TASK_THEME dark-256.theme
+#else
+#    set -gx TASK_THEME light-256.theme
+#end
 
 # taskwarrior functions
-source /Users/dinesh/.config/fish/conf.d/task_funcs.fish
+#source /Users/dinesh/.config/fish/conf.d/task_funcs.fish

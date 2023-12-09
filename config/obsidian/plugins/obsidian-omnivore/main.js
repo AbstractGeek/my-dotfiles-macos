@@ -10919,6 +10919,7 @@ var loadArticles = async (endpoint, apiKey, after = 0, first = 10, updatedAt = "
                     updatedAt
                     type
                     highlightPositionPercent
+                    highlightPositionAnchorIndex
                     labels {
                       name
                     }
@@ -12386,10 +12387,21 @@ function upperCaseFirst() {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   };
 }
+function formatDateFunc() {
+  return function(text, render3) {
+    const [dateVariable, format] = text.split(",", 2);
+    const date = render3(dateVariable);
+    if (!date) {
+      return "";
+    }
+    return formatDate(date, format);
+  };
+}
 var functionMap = {
   lowerCase,
   upperCase,
-  upperCaseFirst
+  upperCaseFirst,
+  formatDate: formatDateFunc
 };
 var renderFilename = (article, filename, dateFormat) => {
   var _a;
@@ -12400,7 +12412,8 @@ var renderFilename = (article, filename, dateFormat) => {
     author: (_a = article.author) != null ? _a : "unknown-author",
     date,
     dateSaved: date,
-    datePublished
+    datePublished,
+    id: article.id
   });
   return (0, import_lodash.truncate)(renderedFilename, {
     length: 100
@@ -12436,7 +12449,9 @@ var renderArticleContnet = async (article, template, highlightOrder, dateHighlig
       dateHighlighted: formatDate(highlight.updatedAt, dateHighlightedFormat),
       note: (_a2 = highlight.annotation) != null ? _a2 : void 0,
       labels: renderLabels(highlight.labels),
-      color: (_b2 = highlight.color) != null ? _b2 : "yellow"
+      color: (_b2 = highlight.color) != null ? _b2 : "yellow",
+      positionPercent: highlight.highlightPositionPercent,
+      positionAnchorIndex: highlight.highlightPositionAnchorIndex + 1
     };
   });
   const dateSaved = formatDate(article.savedAt, dateSavedFormat);
@@ -14512,7 +14527,7 @@ var OmnivoreSettingTab = class extends import_obsidian6.PluginSettingTab {
       this.plugin.settings.isSingleFile = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian6.Setting(containerEl).setName("Filename").setDesc("Enter the filename where the data will be stored. {{{title}}}, {{{dateSaved}}} and {{{datePublished}}} could be used in the filename").addText((text) => text.setPlaceholder("Enter the filename").setValue(this.plugin.settings.filename).onChange(async (value) => {
+    new import_obsidian6.Setting(containerEl).setName("Filename").setDesc("Enter the filename where the data will be stored. {{id}}, {{{title}}}, {{{dateSaved}}} and {{{datePublished}}} could be used in the filename").addText((text) => text.setPlaceholder("Enter the filename").setValue(this.plugin.settings.filename).onChange(async (value) => {
       this.plugin.settings.filename = value;
       await this.plugin.saveSettings();
     }));
