@@ -1,0 +1,20 @@
+# Configuration file for koreader2obsidian.py
+#
+# Constants
+log_file: ""
+output_folder: ""
+
+# Styles
+note_styles:
+  lighten:
+    type: "quote"
+    title: "Note"
+  invert:
+    type: "important"
+    title: "Important"
+  strikeout:
+    type: "danger"
+    title: "In discord"
+  underscore:
+    type: "question"
+    title: "Thought provoking"
