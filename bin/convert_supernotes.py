@@ -39,9 +39,9 @@ def find_file_hash(filename):
     return digest.hexdigest()
 
 
-def convert_supernotes(note, supernote_tool_path, dest_dir=None):
+def convert_supernotes(note, supernote_tool_path, dest_file=None):
     # Generate pdf/txt name based on dest_dir
-    if dest_dir is None:
+    if dest_file is None:
         # Get filename
         pdf_name = os.path.join(
             os.path.dirname(note), os.path.splitext(os.path.basename(note))[0] + ".pdf"
@@ -51,12 +51,8 @@ def convert_supernotes(note, supernote_tool_path, dest_dir=None):
         )
     else:
         # Get filename
-        pdf_name = os.path.join(
-            dest_dir, os.path.splitext(os.path.basename(note))[0] + ".pdf"
-        )
-        txt_name = os.path.join(
-            dest_dir, os.path.splitext(os.path.basename(note))[0] + ".txt"
-        )
+        pdf_name = dest_file + ".pdf"
+        txt_name = dest_file + ".txt"
 
     # Convert to pdf
     subprocess.run(
@@ -146,8 +142,8 @@ def main(config_file):
         logging.info("[root_mode] Starting conversion")
 
         # Check src and dest lengths
-        if len(config["src_files"]) != len(config["dest_dirs"]):
-            logging.error("Length of src_files and dest_dirs not equal, exiting")
+        if len(config["src_files"]) != len(config["dest_files"]):
+            logging.error("Length of src_files and dest_files not equal, exiting")
             sys.exit(1)
         
         # get config dir
@@ -163,7 +159,7 @@ def main(config_file):
         if os.path.exists(os.path.join(config_dir, "hashes.pickle")):
             with open(os.path.join(config_dir, "hashes.pickle"), "rb") as handle:
                 old_hashes = pickle.load(handle)
-            for key, value, dest in zip(new_hashes.keys(), new_hashes.values(), config["dest_dirs"]):
+            for key, value, dest in zip(new_hashes.keys(), new_hashes.values(), config["dest_files"]):
                 if key in old_hashes:
                     if value != old_hashes[key]:
                         logging.info("[single_mode] File changed: %s", key)
@@ -177,7 +173,7 @@ def main(config_file):
  
         else:
             # first time running the code
-            for key, dest in zip(new_hashes.keys(), config["dest_dirs"]):
+            for key, dest in zip(new_hashes.keys(), config["dest_files"]):
                 logging.info("[single_mode] New file: %s", key)
                 convert_supernotes(key, supernote_tool_path, dest)
 
