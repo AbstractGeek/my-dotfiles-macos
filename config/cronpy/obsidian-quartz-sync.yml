@@ -1,0 +1,13 @@
+# Configuration file for obsidian-quartz-sync
+
+## Constants
+log_file: "~/.local/logs/obsidian-quartz-sync.log"
+obsidian_folder: "add folder path here"
+quartz_folder: "add folder path here"
+
+## 
+attachment_folder: "assets"
+ignore_folders: 
+ - "add folder path here"
+ - "add folder path here"
+ 

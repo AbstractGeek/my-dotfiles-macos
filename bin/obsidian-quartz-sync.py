@@ -12,6 +12,7 @@ import frontmatter
 import logging
 from time import strftime, localtime
 from pprint import pprint
+import shutil
 
 ## Functions
 def find_publish_mds(md, ignore):
@@ -73,7 +74,11 @@ def main(config_file):
     for md in glob(os.path.join(src, "**/*.md"), recursive=True):
         path, asset = find_publish_mds(md, config["ignore_folders"])
         if path:
-            sync_files.append((md, os.path.join(dest, path, os.path.basename(md))))
+            if ".md" in path:
+                sync_files.append((md, os.path.join(dest, path)))
+            else:
+                #print('md: %s -> copied to: %s'%(md, os.path.join(dest, path, os.path.basename(md))))
+                sync_files.append((md, os.path.join(dest, path, os.path.basename(md))))
         if asset:
             for fn in asset:
                 sync_files.append((find_asset(src, fn), os.path.join(dest, asset_dir, fn[2:-2])) )
@@ -87,10 +92,10 @@ def main(config_file):
         if os.path.exists(dest):
             if os.path.getmtime(src) > os.path.getmtime(dest):
                 logging.info(f"Updating {dest}")
-                os.system(f"cp {src} {dest}")
+                shutil.copy2(src, dest)
         else:
             logging.info(f"Copying {dest}")
-            os.system(f"cp {src} {dest}")
+            shutil.copy2(src, dest)
 
     # sync complete
 
