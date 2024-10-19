@@ -35,6 +35,7 @@ def find_publish_mds(md, ignore):
     else:   
         return None, None
 
+
 def find_asset(src, fn):
     '''find asset in md file'''
     fn = fn[2:-2]
@@ -47,7 +48,37 @@ def find_asset(src, fn):
         return None
     else:
         return files[0]
+
+
+def copy_public_text(src, dest):
+    '''copy public text to destination'''
+    with open(src, 'r') as f:
+        lines = f.readlines()
     
+    # find start and stop of private text
+    start = [i for i, e in enumerate(lines) if e == '%%private-start%%\n']
+    stop = [i for i, e in enumerate(lines) if e == '%%private-stop%%\n']
+
+    # make sure start and stop are in pairs
+    if len(start) != len(stop):
+        if len(start) - len(stop) > 1:
+            logging.error(f"Private text start and stop not in pairs in {src}")
+            return None
+        else:
+            stop.append(len(lines)-1)
+
+    # if no private text, copy all
+    if len(start) == 0:
+        shutil.copy2(src, dest)
+    else:
+        for r in reversed(range(len(start))):
+            lines[start[r]:stop[r]+1] = []    
+        # write to destination
+        with open(dest, "w") as f:
+            f.writelines(lines)
+
+    return None
+
 
 ## Main
 def main(config_file):
@@ -92,10 +123,10 @@ def main(config_file):
         if os.path.exists(dest):
             if os.path.getmtime(src) > os.path.getmtime(dest):
                 logging.info(f"Updating {dest}")
-                shutil.copy2(src, dest)
+                copy_public_text(src, dest)
         else:
             logging.info(f"Copying {dest}")
-            shutil.copy2(src, dest)
+            copy_public_text(src, dest)
 
     # sync complete
 
