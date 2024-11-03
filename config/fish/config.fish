@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 fish_add_path /opt/homebrew/bin
-#status --is-interactive; and rbenv init - fish | source
+status --is-interactive; and rbenv init - fish | source
 
 # pipx
 set PATH $PATH /Users/dinesh/.local/bin

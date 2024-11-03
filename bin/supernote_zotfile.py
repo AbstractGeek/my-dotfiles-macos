@@ -11,7 +11,7 @@ import yaml
 import sys
 
 ## Constants
-config_default = "~/.config/supernote_zotfile/config.yml"
+config_default = "~/.config/cronpy/supernote_zotfile.yml"
 
 ## Functions
 def find_file_hash(filename):

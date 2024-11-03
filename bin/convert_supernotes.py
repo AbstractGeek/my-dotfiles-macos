@@ -10,7 +10,7 @@ import logging
 import yaml
 
 ## Constants
-config_default = "~/.config/convert_supernotes/config.yml"
+config_default = "~/.config/cronpy/convert_supernotes.yml"
 
 ## Functions
 def find_hashes(root_dir, ext):
@@ -61,6 +61,8 @@ def convert_supernotes(note, supernote_tool_path, dest_file=None):
             "convert",
             "-t",
             "pdf",
+            "--pdf-type",
+            "vector",
             "-a",
             note,
             pdf_name,
@@ -112,8 +114,8 @@ def main(config_file):
         new_hashes = find_hashes(root_dir, ".note")
 
         # Load old hashes and update new or changed files
-        if os.path.exists(os.path.join(root_dir, "hashes.pickle")):
-            with open(os.path.join(root_dir, "hashes.pickle"), "rb") as handle:
+        if os.path.exists(os.path.join(root_dir, "note_hashes.pickle")):
+            with open(os.path.join(root_dir, "note_hashes.pickle"), "rb") as handle:
                 old_hashes = pickle.load(handle)
             for key, value in new_hashes.items():
                 if key in old_hashes:
@@ -133,7 +135,7 @@ def main(config_file):
                 convert_supernotes(key, supernote_tool_path)
 
         # Save new hashes
-        with open(os.path.join(root_dir, "hashes.pickle"), "wb") as handle:
+        with open(os.path.join(root_dir, "note_hashes.pickle"), "wb") as handle:
             pickle.dump(new_hashes, handle, protocol=pickle.HIGHEST_PROTOCOL)
         logging.info("[root_mode] Completed conversion, exiting")
 
@@ -156,29 +158,29 @@ def main(config_file):
             new_hashes[item_path] = find_file_hash(item_path)
 
         # Load old hashes and update new or changed files
-        if os.path.exists(os.path.join(config_dir, "hashes.pickle")):
-            with open(os.path.join(config_dir, "hashes.pickle"), "rb") as handle:
+        if os.path.exists(os.path.join(config_dir, "note_hashes.pickle")):
+            with open(os.path.join(config_dir, "note_hashes.pickle"), "rb") as handle:
                 old_hashes = pickle.load(handle)
             for key, value, dest in zip(new_hashes.keys(), new_hashes.values(), config["dest_files"]):
                 if key in old_hashes:
                     if value != old_hashes[key]:
                         logging.info("[single_mode] File changed: %s", key)
-                        convert_supernotes(key, supernote_tool_path, dest)
+                        convert_supernotes(key, supernote_tool_path, os.path.expanduser(dest))
                     # else:
                     #     print("File unchanged")
                     #     logging.info("File unchanged: %s", key)
                 else:
                     logging.info("[single_mode] New file: %s", key)
-                    convert_supernotes(key, supernote_tool_path, dest)
+                    convert_supernotes(key, supernote_tool_path, os.path.expanduser(dest))
  
         else:
             # first time running the code
             for key, dest in zip(new_hashes.keys(), config["dest_files"]):
                 logging.info("[single_mode] New file: %s", key)
-                convert_supernotes(key, supernote_tool_path, dest)
+                convert_supernotes(key, supernote_tool_path, os.path.expanduser(dest))
 
         # Save new hashes
-        with open(os.path.join(config_dir, "hashes.pickle"), "wb") as handle:
+        with open(os.path.join(config_dir, "note_hashes.pickle"), "wb") as handle:
             pickle.dump(new_hashes, handle, protocol=pickle.HIGHEST_PROTOCOL)
         logging.info("[single_mode] Completed conversion, exiting")
 

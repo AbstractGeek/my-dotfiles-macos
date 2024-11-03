@@ -1,0 +1,17 @@
+# Configuration file for convert_supernotes.sh
+#
+# Constants
+log_file: "~/.local/logs/convert_supernotes.log"
+supernote_tool_path: "~/.virtualenvs/cronpy/bin/supernote-tool"
+# Root directory (all supernotes will be converted)
+root_mode: false  # decides mode of operation
+root_dir: "add folder path here" # add folder where notes need to be converted into pdfs
+# Single file mode (src supernotes will be converted and placed in dest)
+single_mode: true
+src_files:
+  - src_1 #src_1 path
+  - src_2
+
+dest_files: 
+  - dest_1 # dest_1 path
+  - dest_2

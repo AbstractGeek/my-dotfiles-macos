@@ -12,11 +12,9 @@
     ~/.config/fish:
         glob: true
         path: config/fish/*
-    #~/.gitconfig: sconfig/gitconfig
     ~/.zprofile: config/zprofile
     ~/.config/fish/sconfig.fish: sconfig/fish/sconfig.fish
     ~/.config/fish/sfunctions: sconfig/fish/sfunctions
-    #~/.gnupg/gpg.conf: sconfig/gpg.conf
     ~/.config/offlineimap: sconfig/offlineimap
     ~/Library/Thunderbird/profiles.ini: sconfig/thunderbird/profiles.ini
     ~/.notmuch-config: sconfig/notmuch.config
@@ -28,16 +26,15 @@
         path: sconfig/task
         create: true
     ~/.taskrc: sconfig/task/taskrc
-    ~/.config/convert_supernotes/config.yml: sconfig/convert_supernotes_config.yml
-    ~/.config/supernote_zotfile/config.yml:  sconfig/supernote_zotfile_config.yml
     ~/.config/koreader2obsidian.yml:  sconfig/koreader2obsidian.yml
+    ~/.config/cronpy/:
+        glob: true
+        path: sconfig/cronpy/*
+    "~/Library/Application Support/organize/config.yaml": sconfig/cronpy/organize-config.yaml
 
-
-    # custom applications
-    ~/Applications/custom_startup.app:
-        path: sbin/custom_startup.app
-        create: true
-    ~/Library/Preferences/com.athlabs.spyglass/settings.ron: sconfig/spyglass
+    #~/.gnupg/gpg.conf: sconfig/gpg.conf 
+    #~/.gitconfig: sconfig/gitconfig
+    # ~/Library/Preferences/com.athlabs.spyglass/settings.ron: sconfig/spyglass
     
 
 # work around for multiple globs (https://github.com/anishathalye/dotbot/issues/300)

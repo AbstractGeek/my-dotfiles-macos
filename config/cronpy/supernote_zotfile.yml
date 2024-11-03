@@ -1,0 +1,15 @@
+# Configuration file for supernote_zotfile.py
+#
+# The goal of supernote_zotfile.py + this associated config file is to make it easy to copy papers from zotero into supernote and move annotated papers back into zotero. 
+# Associated steps with using this addon:
+# - zotfile addon is use move papers into a folder
+# - papers in this folder will be moved to supernote. updated pdfs will be updated automatically
+# - once annotation is done in supernote, the exported file with the annotations will automatically be moved into the zotfile folder, replacing the unannotated pdf with the annotated one. 
+# - zotfile can be used to pull the annotated file back into zotero.
+# 
+# Dinesh Natesan
+zotfile_folder: "add folder path here" # folder where zotfile puts/looks for pdfs
+markfile_folder: "add folder path here" # folder to backup markfiles created by supernote
+supernote_folder: "add folder path here" # folder in supernote where you want papers to be copied to
+export_folder: "add folder path here" # export folder in supernote where exported pdf with annotations is saved. will be automatically picked up and deleted by this script.
+log_file: "~/.local/logs/supernote_zotfile.log"
