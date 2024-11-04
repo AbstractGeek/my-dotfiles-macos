@@ -52,6 +52,7 @@ def find_asset(src, fn):
 
 def copy_public_text(src, dest):
     '''copy public text to destination'''
+    print(src)
     with open(src, 'r') as f:
         lines = f.readlines()
     
@@ -100,6 +101,7 @@ def main(config_file):
     dest = os.path.expanduser(config["quartz_folder"])
     asset_dir = os.path.expanduser(config["attachment_folder"])
     sync_files = []
+    assets = []
 
     # Find md files with publish and its assets
     for md in glob(os.path.join(src, "**/*.md"), recursive=True):
@@ -112,7 +114,7 @@ def main(config_file):
                 sync_files.append((md, os.path.join(dest, path, os.path.basename(md))))
         if asset:
             for fn in asset:
-                sync_files.append((find_asset(src, fn), os.path.join(dest, asset_dir, fn[2:-2])) )
+                assets.append((find_asset(src, fn), os.path.join(dest, asset_dir, fn[2:-2])) )
 
     # sync files based on date modified
     for src, dest in sync_files:
@@ -127,6 +129,20 @@ def main(config_file):
         else:
             logging.info(f"Copying {dest}")
             copy_public_text(src, dest)
+
+    # asset files based on date modified
+    for src, dest in assets:
+        if not src:
+            continue
+        if not os.path.exists(os.path.dirname(dest)):
+            os.makedirs(os.path.dirname(dest))
+        if os.path.exists(dest):
+            if os.path.getmtime(src) > os.path.getmtime(dest):
+                logging.info(f"Updating {dest}")
+                shutil.copy2(src, dest)
+        else:
+            logging.info(f"Copying {dest}")
+            shutil.copy2(src, dest)
 
     # sync complete
 
