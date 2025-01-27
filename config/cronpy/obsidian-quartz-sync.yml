@@ -5,9 +5,17 @@ log_file: "~/.local/logs/obsidian-quartz-sync.log"
 obsidian_folder: "add folder path here"
 quartz_folder: "add folder path here"
 
-## 
+## Folders
 attachment_folder: "assets"
 ignore_folders: 
  - "add folder path here"
  - "add folder path here"
  
+## Watermark
+watermark:
+  pdf:
+    postscript: "location of postscript file"   
+  img:
+    copyright: "© Your Name"
+    fontsize: "0.01" # 1% of height
+    offset: "+0+10"

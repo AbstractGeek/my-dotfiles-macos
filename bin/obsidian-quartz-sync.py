@@ -10,9 +10,9 @@ from glob import glob
 import yaml
 import frontmatter
 import logging
-from time import strftime, localtime
-from pprint import pprint
 import shutil
+import subprocess
+# from pprint import pprint
 
 ## Functions
 def find_publish_mds(md, ignore):
@@ -57,8 +57,8 @@ def copy_public_text(src, dest):
         lines = f.readlines()
     
     # find start and stop of private text
-    start = [i for i, e in enumerate(lines) if e == '%%private-start%%\n']
-    stop = [i for i, e in enumerate(lines) if e == '%%private-stop%%\n']
+    start = [i for i, e in enumerate(lines) if '%%private-start%%' in e]
+    stop = [i for i, e in enumerate(lines) if '%%private-stop%%' in e]
 
     # make sure start and stop are in pairs
     if len(start) != len(stop):
@@ -79,6 +79,57 @@ def copy_public_text(src, dest):
             f.writelines(lines)
 
     return None
+
+def copy_assets(src, dest, config):
+    # check if asset is a pdf
+    if (os.path.splitext(src)[1] == '.pdf'):
+        # place watermarked pdfs at destination
+        watermark_pdf(src, dest, config["pdf"])
+    else:
+        # place watermarked image
+        watermark_image(src, dest, config["img"])
+
+def watermark_pdf(src, dest, config):
+    # use ghostscript to add a copyright to pdfs
+    result = subprocess.run(
+        [
+            'gs',
+            '-dBATCH',
+            '-dNOPAUSE',
+            '-q',
+            '-sDEVICE=pdfwrite',
+            '-o', dest,
+            config["postscript"],
+            src,
+        ]
+    )
+    if result.stdout:
+        logging.info("Ghostscript: %s" % (result.stdout))
+    if result.stderr:
+        logging.error("Ghostscript: %s" % (result.stderr))
+
+def watermark_image(src, dest, config):
+    # use imagemagick to add a copyright to images
+    result = subprocess.run(
+        [
+            "magick",
+            src,
+            "-gravity",
+            "SouthEast",
+            "-append",
+            "-strip",
+            "-pointsize",
+            "%%[fx:h*%s]" % (config["fontsize"]),
+            "-annotate",
+            config["offset"],
+            config["copyright"],
+            dest,
+        ]
+    )
+    if result.stdout:
+        logging.info("Imagemagick: %s" % (result.stdout))
+    if result.stderr:
+        logging.error("Imagemagick: %s" % (result.stderr))    
 
 
 ## Main
@@ -139,13 +190,12 @@ def main(config_file):
         if os.path.exists(dest):
             if os.path.getmtime(src) > os.path.getmtime(dest):
                 logging.info(f"Updating {dest}")
-                shutil.copy2(src, dest)
+                copy_assets(src, dest, config["watermark"])
         else:
             logging.info(f"Copying {dest}")
-            shutil.copy2(src, dest)
+            copy_assets(src, dest, config["watermark"])
 
     # sync complete
-
 
 # get path
 if __name__ == "__main__":

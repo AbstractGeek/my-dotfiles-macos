@@ -1,0 +1,16 @@
+<<
+   /EndPage
+   {
+     2 eq { pop false }
+     {
+         gsave      
+         /Helvetica findfont 18 scalefont setfont
+         newpath 
+         .20 setgray 10 10 moveto
+         /copyright glyphshow 
+         ( Your Name) show
+         grestore
+         true
+     } ifelse
+   } bind
+>> setpagedevice
