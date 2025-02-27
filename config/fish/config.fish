@@ -38,3 +38,9 @@ set -gx EDITOR /usr/bin/nano
 
 # taskwarrior functions
 #source /Users/dinesh/.config/fish/conf.d/task_funcs.fish
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/dinesh/.lmstudio/bin
+
+# starship
+starship init fish | source
