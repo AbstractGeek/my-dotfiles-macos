@@ -35,7 +35,9 @@
     #~/.gnupg/gpg.conf: sconfig/gpg.conf 
     #~/.gitconfig: sconfig/gitconfig
     # ~/Library/Preferences/com.athlabs.spyglass/settings.ron: sconfig/spyglass
-    
+
+    ~/.config/starship.toml: config/starship.toml
+
 
 # work around for multiple globs (https://github.com/anishathalye/dotbot/issues/300)
 - link:
