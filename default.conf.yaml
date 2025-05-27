@@ -37,6 +37,9 @@
     # ~/Library/Preferences/com.athlabs.spyglass/settings.ron: sconfig/spyglass
 
     ~/.config/starship.toml: config/starship.toml
+    ~/.config/jrnl: sconfig/jrnl
+    ~/.config/jupytext.toml: config/jupytext.toml
+
 
 
 # work around for multiple globs (https://github.com/anishathalye/dotbot/issues/300)
