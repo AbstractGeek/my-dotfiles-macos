@@ -31,6 +31,7 @@
         glob: true
         path: sconfig/cronpy/*
     "~/Library/Application Support/organize/config.yaml": sconfig/cronpy/organize-config.yaml
+    "~/Library/Application Support/Stretchly/config.json": config/stretchly.json
 
     #~/.gnupg/gpg.conf: sconfig/gpg.conf 
     #~/.gitconfig: sconfig/gitconfig

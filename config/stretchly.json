@@ -1,8 +1,8 @@
 {
-	"microbreakDuration": 20000,
-	"microbreakInterval": 600000,
+	"microbreakDuration": 30000,
+	"microbreakInterval": 1200000,
 	"breakDuration": 600000,
-	"breakInterval": 4,
+	"breakInterval": 2,
 	"breakNotification": true,
 	"microbreakNotification": true,
 	"breakNotificationInterval": 30000,
@@ -21,16 +21,19 @@
 	"breakPostponesLimit": 1,
 	"breakPostponableDurationPercent": 30,
 	"mainColor": "#478484",
-	"transparentMode": true,
+	"miniBreakColor": "#478484",
+	"transparentMode": false,
+	"blurredBackground": false,
 	"opacity": 0.9,
 	"audio": "crystal-glass",
+	"miniBreakAudio": "crystal-glass",
 	"volume": 1,
 	"fullscreen": false,
 	"ideas": true,
 	"naturalBreaks": true,
 	"naturalBreaksInactivityResetTime": 300000,
 	"allScreens": false,
-	"useIdeasFromSettings": true,
+	"useIdeasFromSettings": false,
 	"language": "en",
 	"notifyNewVersion": true,
 	"isFirstRun": false,
@@ -46,14 +49,14 @@
 	"endBreakShortcut": "CmdOrCtrl+X",
 	"breakWindowWidth": 0.85,
 	"breakWindowHeight": 0.85,
-	"checkNewVersion": true,
+	"checkNewVersion": false,
 	"breakIdeas": [
 		{
 			"data": [
 				"Not alone",
 				"Do you find it hard to take a break alone? Try to do it with a co-worker. Aside from making it easier to stick to breaks, you will have a chance to get to know them better. Taking breaks together increases productivity."
 			],
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": [
@@ -67,7 +70,7 @@
 				"Microbreaks",
 				"Rest is a key component in ensuring the performance of the musculoskeletal system. Frequent breaks can decrease the duration of a task and help lower the exposure to ergonomic injury risk."
 			],
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": [
@@ -78,10 +81,17 @@
 		},
 		{
 			"data": [
+				"Blink",
+				"Looking at screens for a long time causes you to blink less, thus exposing your eyes to the air. Blink rapidly for a few seconds to refresh the tear film and clear dust from the eye surface."
+			],
+			"enabled": true
+		},
+		{
+			"data": [
 				"Ergonomics",
 				"Improper height and angle of the keyboard, mouse, monitor or working surface can cause health problems. Take some time to read about desk ergonomics."
 			],
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": [
@@ -95,7 +105,7 @@
 				"Change",
 				"Do you have a stability ball or standing work desk? Consider replacing your desk chair with them for a while."
 			],
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": [
@@ -116,14 +126,14 @@
 				"Metabolism",
 				"Emerging research shows that sitting for long periods of time contributes to risk of metabolic syndrome, heart attack and stroke risk and overall death risk, among others. Taking regular walking breaks can help your circulation, working to counteract some of those problems."
 			],
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": [
 				"Active Meetings",
 				"How about moving meetings from the conference room to the concourse? Walking not only burns calories but it may even foster a sense of collaboration."
 			],
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": [
@@ -165,29 +175,42 @@
 				"Exercise",
 				"Evidence suggests small amounts of regular exercise can bring dramatic health benefits, including measurably reducing stress."
 			],
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": [
 				"Repeat",
 				"Have you found your stretch-ly-routine? Do not forget to repeat it for more than once to better fight effects of prolonged sitting."
 			],
-			"enabled": false
+			"enabled": true
 		},
-
+		{
+			"data": [
+				"Wrist and forearm",
+				"Extend your arms with the palms facing towards you, then slowly rotate the hands four times clockwise, then four times counter-clockwise."
+			],
+			"enabled": true
+		},
+		{
+			"data": [
+				"Back stretching",
+				"Join your hands behind your head, then lift them together up above your head ending with your palms facing upward."
+			],
+			"enabled": true
+		},
 		{
 			"data": [
 				"Mobilize",
 				"For every thirty minutes of stagnation, you should have at least one minute of stimulation."
 			],
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": [
 				"7 Minute Workout",
 				"This workout packs in a full-body exercise routine in a fraction of the time. But as with any exercise, be careful. There are numerous apps to get you started."
 			],
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": [
@@ -238,11 +261,38 @@
 			],
 			"enabled": true
 		},
-
+		{
+			"data": [
+				"Focus change",
+				"Hold one finger close to the eye and focus on it. Slowly move the finger away, focus far into the distance and then back to the finger. Bring the finger back and focus on something far away."
+			],
+			"enabled": true
+		},
+		{
+			"data": [
+				"Palming",
+				"While seated, brace elbows on the desk and close to the desk edge. Let your weight fall forward and cup hands over eyes. Close your eyes and inhale slowly through nose and hold for few seconds. Continue deep breathing."
+			],
+			"enabled": true
+		},
+		{
+			"data": [
+				"Hand squeezes",
+				"Squeeze a pair of balled-up socks or a soft rubber ball, hold for 5 seconds. Repeat whole process a few times."
+			],
+			"enabled": true
+		},
 		{
 			"data": [
 				"Slow Breathing",
 				"Emerging research suggests potential for use of controlled slow breathing techniques as a means of optimising physiological parameters that appear to be associated with health and longevity."
+			],
+			"enabled": true
+		},
+		{
+			"data": [
+				"Imaginative visualization",
+				"Close your eyes and imagine yourself in a peaceful and calming place, such as a beach or a forest, focusing on the sights, sounds, and sensations of that environment."
 			],
 			"enabled": true
 		}
@@ -306,7 +356,7 @@
 		},
 		{
 			"data": "A truly ergonomic workstation is one that you regularly push away from.",
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": "Close your eyes and count your breaths.",
@@ -326,7 +376,7 @@
 		},
 		{
 			"data": "With your right hand, grab each finger of your left hand in turn and squeeze. Repeat on the other side.",
-			"enabled": false
+			"enabled": true
 		},
 		{
 			"data": "Stand up and do a lunge. Hold for 10 seconds, then do the other leg.",
@@ -393,52 +443,88 @@
 			"enabled": true
 		},
 		{
-			"data": "Stand tall with your arms by your side. Squeeze your solder blades together and hold.",
-			"enabled": true
-		},
-		{
-			"data": "Blink continuously.",
-			"enabled": true
-		},
-		{
-			"data": "Extend your arms with the palms facing towards you, then slowly rotate the hands four times clockwise, then four times counter-clockwise.",
-			"enabled": false
-		},
-		{
-			"data": "Join your hands behind your head, then lift them together up above your head ending with your palms facing upward.",
-			"enabled": true
-		},
-		{
-			"data": "Hold one finger close to the eye and focus on it. Slowly move the finger away, focus far into the distance and then back to the finger. Bring the finger back and focus on something far away.",
-			"enabled": true
-		},
-		{
-			"data": "Squeeze a pair of balled-up socks or a soft rubber ball, hold for 5 seconds. Repeat whole process few times.",
-			"enabled": true
-		},
-		{
-			"data":"While seated, brace elbows on the desk and close to the desk edge. Let your weight fall forward and cup hands over eyes. Close your eyes and inhale slowly through nose and hold for few seconds. Continue deep breathing.",
-			"enabled": true
-		},
-		{
-			"data":"Close your eyes and move them in a circle",
-			"enabled": true
-		},
-		{
-			"data":"Close your eyes and move them left-right and up-down",
+			"data": "Stand tall with your arms by your side. Squeeze your shoulder blades together and hold.",
 			"enabled": true
 		},
 		{
 			"data": "Stand tall with your arms raised along your shoulders. Move hands slightly behind your back, hold for a second and return.",
 			"enabled": true
+		},
+		{
+			"data": "Sit on the edge of your chair, twist your torso to one side and hold for 10-15 seconds. Repeat on the other side.",
+			"enabled": true
+		},
+		{
+			"data": "Stand up and put one foot on a nearby object, like a chair or step stool. Keep your knee bent and hold for 10-15 seconds. Repeat with the other foot.",
+			"enabled": true
+		},
+		{
+			"data": "Stand with your feet shoulder-width apart, lower your body down as if you were sitting back into a chair, then stand back up. Repeat several times.",
+			"enabled": true
+		},
+		{
+			"data": "Stand with your back and hands on a wall, then slowly move your arms up and down as if you were making snow angels.",
+			"enabled": true
+		},
+		{
+			"data": "Stand facing a wall and place your hands on it, then do several push-ups.",
+			"enabled": true
+		},
+		{
+			"data": "Sit on the edge of your chair and extend one leg straight out in front of you, holding for 10-15 seconds. Repeat with the other leg.",
+			"enabled": true
+		},
+		{
+			"data": "Stand facing a wall, put one foot back and the other foot forward, then lean into the wall. Repeat with the other leg.",
+			"enabled": true
+		},
+		{
+			"data": "Hold one arm straight up, then use the other arm to gently push the elbow of the first arm towards your head. Hold for 10-15 seconds. Repeat with the other arm.",
+			"enabled": true
+		},
+		{
+			"data": "Tilt your head to one side, then to the other side, and then gently tilt it forward and backward.",
+			"enabled": true
+		},
+		{
+			"data": "Reach one arm across your chest, hold onto the elbow with the other hand, and gently pull it in towards your chest. Repeat with the other arm.",
+			"enabled": true
+		},
+		{
+			"data": "Stand up, put one foot on a nearby object, like a chair or step stool, and reach down to touch your toes. Repeat with the other leg.",
+			"enabled": true
+		},
+		{
+			"data": "Stand in a doorway and place one arm on each side of the doorway, then gently lean forward until you feel a stretch in your chest.",
+			"enabled": true
+		},
+		{
+			"data": "Sit on the edge of a chair or on the floor, and place the soles of your feet together, gently pressing down with your elbows to stretch your inner thighs.",
+			"enabled": true
 		}
 	],
 	"showBreaksAsRegularWindows": false,
 	"appExclusions": [],
+	"appExclusionsCheckInterval": 1000,
 	"pauseForSuspendOrLock": true,
-	"pauseBreaksShortcut": "",
-	"resumeBreaksShortcut": "",
+	"pauseBreaksToggleShortcut": "",
+	"pauseBreaksFor30MinutesShortcut": "",
+	"pauseBreaksFor1HourShortcut": "",
+	"pauseBreaksFor2HoursShortcut": "",
+	"pauseBreaksFor5HoursShortcut": "",
+	"pauseBreaksUntilMorningShortcut": "",
 	"screen": "primary",
 	"timeToBreakInTray": false,
-	"currentTimeInBreaks": false
+	"currentTimeInBreaks": false,
+	"showTrayIcon": true,
+	"skipToNextScheduledBreakShortcut": "",
+	"skipToNextMiniBreakShortcut": "",
+	"skipToNextLongBreakShortcut": "",
+	"resetBreaksShortcut": "",
+	"showTrayMenuInStrictMode": false,
+	"__internal__": {
+		"migrations": {
+			"version": "1.17.2"
+		}
+	}
 }
