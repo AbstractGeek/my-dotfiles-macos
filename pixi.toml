@@ -1,0 +1,17 @@
+[workspace]
+authors = ["Dinesh Natesan <AbstractGeek@users.noreply.github.com>"]
+channels = ["conda-forge"]
+name = ".dotfiles"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+pip = ">=25.2,<26"
+ipykernel = ">=6.30.0,<7"
+tzlocal = ">=5.3,<6"
+pytz = ">=2025.2,<2026"
+
+[pypi-dependencies]
+todoist-api-python = ">=3.1.0, <4"

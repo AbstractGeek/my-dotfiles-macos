@@ -6,4 +6,5 @@ secretfile filter=git-crypt diff=git-crypt
 # my specifications
 sconfig/** filter=git-crypt diff=git-crypt
 sbin/** filter=git-crypt diff=git-crypt
-folders.conf.yaml filter=git-crypt diff=git-crypt
+folders.conf.yaml filter=git-crypt diff=git-crypt# SCM syntax highlighting and preventing 3-way merges
+pixi.lock merge=binary linguist-language=YAML linguist-generated=true

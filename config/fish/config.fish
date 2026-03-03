@@ -43,4 +43,5 @@ set -gx EDITOR /usr/bin/nano
 set -gx PATH $PATH /Users/dinesh/.lmstudio/bin
 
 # starship
+set -gx STARSHIP_CONFIG $HOME/.config/starship.toml
 starship init fish | source
